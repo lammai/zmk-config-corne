@@ -55,7 +55,7 @@
             bindings = <
 &none  &kp TILDE  &kp F1  &kp F2   &kp F3   &kp F4       &none    &kp N7  &kp N8  &kp N9  &kp DEL    &none
 &none  &kp TAB    &kp F5  &kp F6   &kp F7   &kp F8       &none    &kp N4  &kp N5  &kp N6  &trans     &none
-&none  &to 5      &kp F9  &kp F10  &kp F11  &kp F12      &kp N0   &kp N1  &kp N2  &kp N3  &kp EQUAL  &none
+&none  &to 4      &kp F9  &kp F10  &kp F11  &kp F12      &kp N0   &kp N1  &kp N2  &kp N3  &kp EQUAL  &none
                           &to 0    &trans   &kp SPACE    &kp RET  &trans  &to 2
             >;
         };
@@ -78,21 +78,21 @@
             >;
         };
 
-        layer_4 {
+        Gaming {
+            bindings = <
+&none   &kp ESC    &kp Q  &kp W  &kp E    &kp R        &trans  &trans  &trans  &trans  &trans  &trans
+&none   &kp LSHFT  &kp A  &kp S  &kp D    &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X  &kp C    &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                          &mo 5  &kp TAB  &kp SPACE    &trans  &trans  &to 0
+            >;
+        };
+
+        Gaming_sublayer {
             bindings = <
 &none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans  &kp T   &kp Y   &kp I   &kp FSLH    &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans  &kp N   &kp M   &kp B   &kp L       &trans  &trans  &trans  &trans  &trans  &none
                        &trans  &trans  &trans      &trans  &trans  &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&none   &kp ESC    &kp Q  &kp W  &kp E    &kp R        &trans  &trans  &trans  &trans  &trans  &trans
-&none   &kp LSHFT  &kp A  &kp S  &kp D    &kp F        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X  &kp C    &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                          &mo 4  &kp TAB  &kp SPACE    &trans  &trans  &to 0
             >;
         };
     };
