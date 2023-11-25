@@ -44,10 +44,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q  &kp W                  &kp E                     &kp R                     &kp T        &kp Y      &kp U                      &kp I                      &TAP_DANCE SEMI O             &TAP_DANCE APOS P  &none
-&none  &kp A  &HOMEROW_MODS LCTRL S  &HOMEROW_MODS LEFT_ALT D  &HOMEROW_MODS LEFT_GUI F  &kp G        &kp H      &HOMEROW_MODS RIGHT_GUI J  &HOMEROW_MODS RIGHT_ALT K  &HOMEROW_MODS RCTRL L         &kp BACKSPACE      &none
-&none  &kp Z  &kp X                  &kp C                     &kp V                     &kp B        &kp N      &kp M                      &TAP_DANCE MINUS COMMA     &TAP_DANCE UNDERSCORE PERIOD  &kp SLASH          &none
-                                     &sk LEFT_SHIFT            &lt 2 TAB                 &kp SPACE    &kp SPACE  &lt 1 ESCAPE               &kp ENTER
+&none  &kp Q  &kp W                     &kp E                     &kp R                         &kp T        &kp Y      &kp U                          &kp I                      &TAP_DANCE SEMI O             &TAP_DANCE APOS P  &none
+&none  &kp A  &HOMEROW_MODS LEFT_GUI S  &HOMEROW_MODS LEFT_ALT D  &HOMEROW_MODS LEFT_CONTROL F  &kp G        &kp H      &HOMEROW_MODS RIGHT_CONTROL J  &HOMEROW_MODS RIGHT_ALT K  &HOMEROW_MODS RIGHT_GUI L     &kp BACKSPACE      &none
+&none  &kp Z  &kp X                     &kp C                     &kp V                         &kp B        &kp N      &kp M                          &TAP_DANCE MINUS COMMA     &TAP_DANCE UNDERSCORE PERIOD  &kp SLASH          &none
+                                        &sk LEFT_SHIFT            &lt 2 TAB                     &kp SPACE    &kp SPACE  &lt 1 ESCAPE                   &kp ENTER
             >;
         };
 
