@@ -11,6 +11,7 @@
 
 &mt {
     flavor = "tap-preferred";
+    tapping_term_ms = <200>;
 };
 
 / {
@@ -24,7 +25,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            hold-trigger-key-positions = <16>;
         };
 
         TAP_DANCE: TAP_DANCE {
@@ -36,7 +36,6 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            hold-trigger-key-positions = <10 33 32 9>;
         };
     };
 
@@ -44,12 +43,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
             bindings = <
 &none  &kp Q  &kp W  &kp E       &kp R                     &kp T        &kp Y              &kp U          &kp I                   &TAP_DANCE SEMI O             &TAP_DANCE APOS P  &none
 &none  &kp A  &kp S  &kp D       &HOMEROW_MODS LEFT_GUI F  &kp G        &kp H              &kp J          &kp K                   &kp L                         &kp BACKSPACE      &none
@@ -59,12 +52,6 @@
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &none  &kp TILDE  &kp F1  &kp F2   &kp F3   &kp F4       &none    &kp N7  &kp N8  &kp N9  &kp DEL    &none
 &none  &kp TAB    &kp F5  &kp F6   &kp F7   &kp F8       &none    &kp N4  &kp N5  &kp N6  &trans     &none
@@ -74,12 +61,6 @@
         };
 
         raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &none  &kp PRINTSCREEN  &kp PAGE_UP    &kp LEFT_BRACE        &kp RIGHT_BRACE        &none        &none    &kp AMPERSAND    &kp ASTERISK  &none      &TAP_DANCE COLON SEMI         &none
 &none  &kp INSERT       &kp PAGE_DOWN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none        &none    &kp DOLLAR       &kp PERCENT   &kp CARET  &TAP_DANCE SQT DOUBLE_QUOTES  &none
