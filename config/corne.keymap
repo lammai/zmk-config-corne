@@ -9,10 +9,16 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &mt {
     flavor = "tap-preferred";
     tapping_term_ms = <200>;
+};
+
+&mmv {
+   time-to-max-speed-ms = <680>;
+   acceleration-exponent=<2>;
 };
 
 / {
@@ -72,10 +78,10 @@
 
         layer_3 {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none     &kp UP    &none      &none  &none
-&none  &none  &none  &none  &none  &none    &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
-&none  &to 6  &none  &none  &none  &none    &none  &none     &none     &none      &to 4  &none
-                     &none  &none  &none    &none  &none     &none
+&none  &none  &mkp RCLK      &mmv MOVE_UP     &mkp LCLK         &mwh SCROLL_UP   &none  &none     &kp UP    &none      &none  &none
+&none  &none  &mmv MOVE_LEFT &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &mwh SCROLL_DOWN &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
+&none  &to 6  &none          &mwh SCROLL_LEFT &mwh SCROLL_RIGHT &none            &none  &none     &none     &none      &to 4  &none
+                             &none            &none             &none            &none  &none     &none
             >;
         };
 
