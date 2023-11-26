@@ -16,6 +16,15 @@
     tapping_term_ms = <200>;
 };
 
+&mmv {
+   time-to-max-speed-ms = <680>;
+   acceleration-exponent=<2>;
+};
+
+&mwh {
+    acceleration-exponent=<1>;
+};
+
 / {
     behaviors {
         HOMEROW_MODS: HOMEROW_MODS {
