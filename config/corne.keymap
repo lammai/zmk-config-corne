@@ -46,10 +46,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q  &kp W                     &kp E                     &kp R                         &kp T        &kp Y      &kp U                          &kp I                      &TAP_DANCE SEMI O             &TAP_DANCE APOS P  &none
-&none  &kp A  &HOMEROW_MODS LEFT_GUI S  &HOMEROW_MODS LEFT_ALT D  &HOMEROW_MODS LEFT_CONTROL F  &kp G        &kp H      &HOMEROW_MODS RIGHT_CONTROL J  &HOMEROW_MODS RIGHT_ALT K  &HOMEROW_MODS RIGHT_GUI L     &kp BACKSPACE      &none
-&none  &kp Z  &kp X                     &kp C                     &kp V                         &kp B        &kp N      &kp M                          &TAP_DANCE MINUS COMMA     &TAP_DANCE UNDERSCORE PERIOD  &kp SLASH          &none
-                                        &sk LEFT_SHIFT            &lt 2 TAB                     &kp SPACE    &kp SPACE  &lt 1 ESCAPE                   &kp ENTER
+&none  &kp Q  &kp W                         &kp E                     &kp R                     &kp T        &kp Y      &kp U                      &kp I                      &TAP_DANCE SEMI O              &TAP_DANCE APOS P  &none
+&none  &kp A  &HOMEROW_MODS LEFT_CONTROL S  &HOMEROW_MODS LEFT_ALT D  &HOMEROW_MODS LEFT_GUI F  &kp G        &kp H      &HOMEROW_MODS RIGHT_GUI J  &HOMEROW_MODS RIGHT_ALT K  &HOMEROW_MODS RIGHT_CONTROL L  &kp BACKSPACE      &none
+&none  &kp Z  &kp X                         &kp C                     &kp V                     &kp B        &kp N      &kp M                      &TAP_DANCE MINUS COMMA     &TAP_DANCE UNDERSCORE PERIOD   &kp SLASH          &none
+                                            &sk LEFT_SHIFT            &lt 2 TAB                 &kp SPACE    &kp SPACE  &lt 1 ESCAPE               &kp ENTER
             >;
         };
 
@@ -57,7 +57,7 @@
             bindings = <
 &none  &kp ESCAPE  &kp F1  &kp F2   &kp F3   &kp F4       &none      &kp N7  &kp N8  &kp N9  &kp DEL    &none
 &none  &kp TAB     &kp F5  &kp F6   &kp F7   &kp F8       &kp PLUS   &kp N4  &kp N5  &kp N6  &trans     &none
-&none  &to 3       &kp F9  &kp F10  &kp F11  &kp F12      &kp N0     &kp N1  &kp N2  &kp N3  &kp EQUAL  &none
+&none  &none       &kp F9  &kp F10  &kp F11  &kp F12      &kp N0     &kp N1  &kp N2  &kp N3  &kp EQUAL  &none
                            &trans   &trans   &kp SPACE    &kp SPACE  &trans  &trans
             >;
         };
@@ -65,7 +65,7 @@
         raise_layer {
             bindings = <
 &none  &kp TILDE        &kp PAGE_UP    &kp LEFT_BRACE        &kp RIGHT_BRACE        &none        &none                        &kp AMPERSAND    &kp ASTERISK  &kp COLON  &kp DOUBLE_QUOTES          &none
-&none  &kp PRINTSCREEN  &kp PAGE_DOWN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &to 4        &TAP_DANCE UNDERSCORE MINUS  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp SINGLE_QUOTE           &none
+&none  &kp PRINTSCREEN  &kp PAGE_DOWN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none        &TAP_DANCE UNDERSCORE MINUS  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp SINGLE_QUOTE           &none
 &none  &kp INSERT       &kp HOME       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none        &TAP_DANCE QUESTION SLASH    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &TAP_DANCE PIPE BACKSLASH  &none
                                        &trans                &trans                 &kp SPACE    &kp SPACE                    &trans           &trans
             >;
@@ -110,5 +110,10 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
+        nav {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
     };
 };
