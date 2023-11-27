@@ -17,26 +17,15 @@
 };
 
 &mmv {
-  acceleration-exponent = <2>;
+    acceleration-exponent = <2>;
 };
 
 &mwh {
-  acceleration-exponent = <2>;
+    acceleration-exponent = <2>;
 };
 
 / {
     behaviors {
-        HOMEROW_MODS: HOMEROW_MODS {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-        };
-
         TAP_DANCE: TAP_DANCE {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_DANCE";
@@ -47,6 +36,34 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 22 21 20 19 18 30 31 32 33 34 41 40 39 37 36 38>;
+            hold-trigger-on-release;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 39 40 41>;
+        };
     };
 
     keymap {
@@ -54,10 +71,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q  &kp W                         &kp E                     &kp R                     &kp T        &kp Y      &kp U                      &kp I                      &TAP_DANCE SEMI O              &TAP_DANCE APOS P  &none
-&none  &kp A  &HOMEROW_MODS LEFT_CONTROL S  &HOMEROW_MODS LEFT_ALT D  &HOMEROW_MODS LEFT_GUI F  &kp G        &kp H      &HOMEROW_MODS RIGHT_GUI J  &HOMEROW_MODS RIGHT_ALT K  &HOMEROW_MODS RIGHT_CONTROL L  &kp BACKSPACE      &none
-&none  &kp Z  &kp X                         &kp C                     &kp V                     &kp B        &kp N      &kp M                      &TAP_DANCE MINUS COMMA     &TAP_DANCE UNDERSCORE PERIOD   &kp SLASH          &none
-                                            &sk LEFT_SHIFT            &lt 2 TAB                 &kp SPACE    &kp SPACE  &lt 1 ESCAPE               &kp ENTER
+&none  &kp Q  &kp W            &kp E                &kp R            &kp T        &kp Y      &kp U             &kp I                   &TAP_DANCE SEMI O             &TAP_DANCE APOS P  &none
+&none  &kp A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_GUI F  &kp G        &kp H      &hmr RIGHT_GUI J  &hmr RIGHT_CONTROL K    &hmr RIGHT_ALT L              &kp BACKSPACE      &none
+&none  &kp Z  &kp X            &kp C                &kp V            &kp B        &kp N      &kp M             &TAP_DANCE MINUS COMMA  &TAP_DANCE UNDERSCORE PERIOD  &kp SLASH          &none
+                               &sk LEFT_SHIFT       &lt 2 TAB        &kp SPACE    &kp SPACE  &lt 1 ESCAPE      &kp ENTER
             >;
         };
 
