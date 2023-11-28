@@ -16,15 +16,6 @@
     tapping_term_ms = <200>;
 };
 
-&mmv {
-    acceleration-exponent = <1>;
-};
-
-&mwh {
-    acceleration-exponent = <1>;
-    delay-ms = <(-30)>;
-};
-
 / {
     behaviors {
         TAP_DANCE: TAP_DANCE {
@@ -99,9 +90,9 @@
 
         layer_3 {
             bindings = <
-&none  &none  &mkp RCLK       &mmv MOVE_UP      &mkp LCLK          &mwh SCROLL_UP      &kp RC(T)  &kp LC(LS(TAB))  &kp UP    &kp LC(TAB)  &kp RC(W)  &none
-&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &mwh SCROLL_DOWN    &none      &kp LEFT         &kp DOWN  &kp RIGHT    &none      &none
-&none  &to 6  &none           &mwh SCROLL_LEFT  &mwh SCROLL_RIGHT  &none               &none      &none            &none     &none        &to 4      &none
+&none  &none  &mkp RCLK       &mmv MOVE_UP      &mkp LCLK          &mkp MCLK           &kp RC(T)  &kp LC(LS(TAB))  &kp UP    &kp LC(TAB)  &kp RC(W)  &none
+&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &mwh SCROLL_UP      &none      &kp LEFT         &kp DOWN  &kp RIGHT    &none      &none
+&none  &to 6  &none           &mwh SCROLL_LEFT  &mwh SCROLL_RIGHT  &mwh SCROLL_DOWN    &none      &none            &none     &none        &to 4      &none
                               &none             &none              &none               &none      &none            &none
             >;
         };
