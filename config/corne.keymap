@@ -72,9 +72,9 @@
 
         lower_layer {
             bindings = <
-&none  &kp GRAVE  &kp F1            &kp F2                &kp F3            &kp F4       &kp UNDER  &kp AMPERSAND          &kp ASTERISK                &kp APOS              &kp DOUBLE_QUOTES                 &none
-&none  &kp TILDE  &hml LEFT_ALT F5  &hml LEFT_CONTROL F6  &hml LEFT_GUI F7  &kp F8       &kp SEMI   &hmr RIGHT_GUI DOLLAR  &hmr RIGHT_CONTROL PERCENT  &hmr RIGHT_ALT CARET  &trans                            &none
-&none  &none      &kp F9            &kp F10               &kp F11           &kp F12      &kp COLON  &kp EXCL               &kp AT                      &kp HASH              &TAP_DANCE PIPE NON_US_BACKSLASH  &none
+&none  &kp GRAVE  &kp F1            &kp F2                &kp F3            &kp F4       &kp UNDER  &kp AMPERSAND          &kp ASTERISK                &kp APOS              &kp DOUBLE_QUOTES  &none
+&none  &kp TILDE  &hml LEFT_ALT F5  &hml LEFT_CONTROL F6  &hml LEFT_GUI F7  &kp F8       &kp SEMI   &hmr RIGHT_GUI DOLLAR  &hmr RIGHT_CONTROL PERCENT  &hmr RIGHT_ALT CARET  &trans             &none
+&none  &none      &kp F9            &kp F10               &kp F11           &kp F12      &kp COLON  &kp EXCL               &kp AT                      &kp HASH              &kp BACKSLASH      &none
                                     &trans                &trans            &kp SPACE    &kp SPACE  &trans                 &trans
             >;
         };
