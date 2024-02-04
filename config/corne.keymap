@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
 #include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
@@ -99,19 +99,19 @@
 
         Gaming {
             bindings = <
-&none   &kp ESC    &kp Q  &kp W    &kp E  &kp R        &trans  &trans  &trans  &trans  &trans  &trans
-&none   &kp LSHFT  &kp A  &kp S    &kp D  &kp F        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                          &kp TAB  &mo 5  &kp SPACE    &trans  &to 0   &trans
+&none   &kp ESC    &kp Q  &kp W    &kp E  &kp R        &kp Y      &kp U  &kp I      &kp O    &kp P     &trans
+&none   &kp LSHFT  &kp A  &kp S    &kp D  &kp F        &kp H      &kp J  &kp K      &kp L    &kp BSPC  &trans
+&trans  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans
+                          &kp TAB  &mo 5  &kp SPACE    &kp SPACE  &to 0  &kp RET
             >;
         };
 
         Gaming_sublayer {
             bindings = <
-&none  &kp N1  &kp N2  &trans  &kp NUMBER_3  &kp N4    &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans        &kp G     &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans  &kp N   &kp M   &kp B         &kp L     &trans  &trans  &trans  &trans  &trans  &none
-                       &trans  &trans        &trans    &trans  &trans  &trans
+&none  &kp N1  &kp N2  &trans        &kp NUMBER_3  &kp N4    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans        &trans        &kp G     &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &kp T   &kp M         &kp B         &kp Y     &trans  &trans  &trans  &trans  &trans  &none
+                       &kp LEFT_ALT  &trans        &trans    &trans  &trans  &trans
             >;
         };
 
