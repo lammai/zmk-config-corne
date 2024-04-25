@@ -144,6 +144,13 @@
             bindings = <&shift_l>;
             label = "SHIFT_G";
         };
+
+        caret: caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&zero &l>;
+            label = "CARET";
+        };
     };
 
     keymap {
@@ -233,7 +240,7 @@
         vim_sublayer2 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &gg       &trans  &dollar_sign  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &gg       &trans  &dollar_sign  &trans  &caret  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &zero   &trans        &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans        &trans
             >;
