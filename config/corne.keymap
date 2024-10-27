@@ -131,6 +131,8 @@
 &none  &kp Z  &kp X            &lt 7 C              &lt 7 V          &lt 7 B      &lt 7 N                       &lt 7 M           &lt 7 COMMA           &kp PERIOD        &TAP_DANCE PIPE SLASH  &none
                                &kp LEFT_SHIFT       &lt 1 TAB        &kp SPACE    &TAP_DANCE RIGHT_SHIFT SPACE  &lt 2 ESCAPE      &kp ENTER
             >;
+
+            label = "Base";
         };
 
         Raise {
@@ -140,6 +142,8 @@
 &none  &mo 7      &kp F9            &kp F10               &kp F11           &kp F12      &kp COLON      &kp EXCL               &kp AT                      &kp HASH              &kp BACKSLASH      &none
                                     &trans                &trans            &kp SPACE    &kp SPACE      &trans                 &trans
             >;
+
+            label = "Raise";
         };
 
         Lower {
@@ -149,6 +153,8 @@
 &none  &kp LC(Z)      &kp LC(X)      &kp LC(C)  &kp LC(V)   &kp PRINTSCREEN    &kp N0     &kp NUMBER_1        &kp NUMBER_2           &kp NUMBER_3             &kp EQUAL                         &none
                                      &trans     &trans      &kp SPACE          &kp SPACE  &trans              &trans
             >;
+
+            label = "Lower";
         };
 
         Navigation {
@@ -158,6 +164,8 @@
 &none  &to 6  &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &none             &none      &none            &none     &none        &to 4      &none
                               &none           &none            &none             &none      &none            &none
             >;
+
+            label = "Nav";
         };
 
         Gaming {
@@ -167,6 +175,8 @@
 &trans  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans
                           &kp TAB  &mo 5  &kp SPACE    &kp SPACE  &to 0  &kp RET
             >;
+
+            label = "<Empty>";
         };
 
         Gaming_sublayer {
@@ -176,6 +186,8 @@
 &none  &trans  &kp T   &kp Y         &kp M         &kp B     &trans  &trans  &trans  &trans  &trans  &none
                        &kp LEFT_ALT  &trans        &trans    &trans  &trans  &trans
             >;
+
+            label = "<GG>";
         };
 
         System {
@@ -185,6 +197,8 @@
 &none  &none          &none          &bt BT_CLR     &sys_reset     &bootloader      &bootloader   &sys_reset    &none  &none              &none  &none
                                      &none          &none          &none            &none         &to 0         &none
             >;
+
+            label = "System";
         };
 
         Symbol_combo {
@@ -194,6 +208,8 @@
 &trans  &trans          &trans  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans              &trans              &trans
                                 &trans          &trans            &trans                  &trans                 &trans             &trans
             >;
+
+            label = "Special";
         };
     };
 
