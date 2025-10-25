@@ -132,10 +132,10 @@
             #binding-cells = <0>;
             bindings =
                 <&kp SPACE>,
-                <&macro_press &kp W>,
+                <&macro_wait_time 600>
+                <&kp W>,
                 <&macro_tap_time 500>,
-                <&kp A>,
-                <&macro_release &kp W>,
+                <&kp W &kp A>,
                 <&macro_tap_time 20>,
                 <&kp D &kp S &kp SPACE>;
             label = "ELITE_DANGEROUS_SELL_1T";
