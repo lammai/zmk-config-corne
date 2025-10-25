@@ -132,12 +132,10 @@
             #binding-cells = <0>;
             bindings =
                 <&kp SPACE>,
-                <&macro_press &kp W>,
-                <&macro_press &kp A>,
-                <&macro_wait_time 500>,
-                <&macro_release &kp W>,
-                <&macro_release &kp A>,
-                <&macro_tap &kp D &kp S &kp SPACE>;
+                <&macro_tap_time 500>,
+                <&kp W &kp A>,
+                <&macro_tap_time 20>,
+                <&kp D &kp S &kp SPACE>;
             label = "ELITE_DANGEROUS_SELL_1T";
         };
     };
