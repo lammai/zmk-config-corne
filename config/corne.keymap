@@ -123,7 +123,7 @@
         elite_dangerous_mining_pips: elite_dangerous_mining {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp I &kp I &kp LS(S) &kp LS(D) &kp LS(D) &kp LS(D) &kp LS(D) &kp KC_SLASH>;
+            bindings = <&kp I &kp I &kp LS(S) &kp LS(D) &kp LS(D) &kp LS(D) &kp LS(D) &kp SLASH>;
             label = "ELITE_DANGEROUS_MINING";
         };
 
