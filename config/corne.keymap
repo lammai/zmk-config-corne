@@ -4,12 +4,13 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     flavor = "tap-preferred";
@@ -119,6 +120,26 @@
             bindings = <&kp GRAVE &kp GRAVE &kp LEFT_ARROW>;
             label = "BACKTICK_PAIR";
         };
+
+        elite_dangerous_mining_pips: elite_dangerous_mining {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp LS(DOWN) &kp LS(RIGHT) &kp LS(RIGHT) &kp LS(RIGHT) &kp LS(RIGHT)>;
+            label = "ELITE_DANGEROUS_MINING";
+        };
+
+        elite_dangerous_sell_1t: elite_dangerous_sell_1t {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp SPACE>,
+                <&macro_tap_time 1000>,
+                <&kp W &kp A>,
+                <&macro_tap>,
+                <&kp D &kp S &kp SPACE>;
+
+            label = "ELITE_DANGEROUS_SELL_1T";
+        };
     };
 
     keymap {
@@ -170,9 +191,9 @@
 
         Gaming {
             bindings = <
-&none   &kp ESC    &kp Q  &kp W    &kp E  &kp R        &kp Y      &kp U  &kp I      &kp O    &kp P     &trans
-&none   &kp LSHFT  &kp A  &kp S    &kp D  &kp F        &kp H      &kp J  &kp K      &kp L    &kp BSPC  &trans
-&trans  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans
+&none   &kp ESC    &kp Q  &kp W    &kp E  &kp R        &kp Y      &kp U  &kp I                         &kp O                     &kp P     &trans
+&none   &kp LSHFT  &kp A  &kp S    &kp D  &kp F        &kp H      &kp J  &kp K                         &kp L                     &kp BSPC  &trans
+&trans  &kp LCTRL  &kp Z  &kp X    &kp C  &kp V        &kp N      &kp M  &elite_dangerous_mining_pips  &elite_dangerous_sell_1t  &kp FSLH  &trans
                           &kp TAB  &mo 5  &kp SPACE    &kp SPACE  &to 0  &kp RET
             >;
 
