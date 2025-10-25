@@ -134,7 +134,7 @@
                 <&kp SPACE>,
                 <&macro_wait_time 500>,
                 <&macro_press &kp W>,
-                <&macro_tap_time 1000>,
+                <&macro_tap_time 900>,
                 <&kp A>,
                 <&macro_tap_time 20>,
                 <&macro_release &kp W>,
