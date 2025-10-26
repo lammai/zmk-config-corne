@@ -137,8 +137,9 @@
                 <&macro_tap &kp A>,
                 <&macro_release &kp W>,
                 <&macro_tap_time 20>,
-                <&macro_tap &kp D &kp S &kp SPACE>,
+                <&macro_tap &kp D &kp S>,
                 <&macro_wait_time 2000>,
+                <&macro_tap &kp SPACE>,
                 <&macro_wait_time 15>,
                 <&macro_tap &kp SPACE>,
                 <&macro_press &kp W>,
@@ -146,7 +147,8 @@
                 <&macro_tap &kp A>,
                 <&macro_release &kp W>,
                 <&macro_tap_time 20>,
-                <&macro_tap &kp D &kp S &kp SPACE>;
+                <&macro_tap &kp D &kp S>,
+                <&macro_tap &kp SPACE>,;
             label = "ELITE_DANGEROUS_SELL_1T";
         };
     };
